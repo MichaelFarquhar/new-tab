@@ -1,0 +1,16 @@
+---
+import links from '../links';
+import FeaturedLink from './FeaturedLink.astro';
+---
+
+<div class="grid">
+    {links.featured.map((link) => <FeaturedLink link={link} />)}
+</div>
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(54px, 1fr));
+        grid-row-gap: 14px;
+    }
+</style>
