@@ -1,9 +1,10 @@
 ---
+import Favicon from "./Favicon.astro";
 const { link } = Astro.props;
 ---
 
 <a class="link-btn" href={link}>
-    <img src=`https://www.google.com/s2/favicons?domain=${link}&sz=32` />
+    <Favicon domain={link} size={32}/>
 </a>
 
 <style lang="scss">
