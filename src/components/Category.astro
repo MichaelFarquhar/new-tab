@@ -1,0 +1,16 @@
+---
+const { title, data } = Astro.props;
+---
+
+<details role="list">
+    <summary aria-haspopup="listbox">{title}</summary>
+    <ul role="listbox">
+        {
+            data.map((text) => (
+                <li>
+                    <a>{text}</a>
+                </li>
+            ))
+        }
+    </ul>
+</details>
